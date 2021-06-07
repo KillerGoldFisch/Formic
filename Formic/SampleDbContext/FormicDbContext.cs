@@ -7,7 +7,8 @@ namespace Formic
     {
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=formicdb;Integrated Security=True");
+            //options.UseSqlServer(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=formicdb;Integrated Security=True");
+            options.UseSqlite("Filename=TestDatabase.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
